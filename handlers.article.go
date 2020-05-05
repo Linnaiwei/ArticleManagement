@@ -9,19 +9,19 @@ import (
 
 func showIndexPage(c *gin.Context) {
 	articles := getAllArticles()
-	c.HTML(
-		http.StatusOK,
-		"index.html",
+	render(
+			c,
 		gin.H{
 			"title": "home page",
 			"payload": articles,
 		},
-	)
+		"index.html",
+		)
 }
 
 func getArticle(c *gin.Context) {
-	article_id := c.Param("article_id")
-	id, err1 := strconv.Atoi(article_id)
+	articleId := c.Param("article_id")
+	id, err1 := strconv.Atoi(articleId)
 	article, err := getArticleById(id)
 	if err == nil && err1 == nil {
 		c.HTML(
