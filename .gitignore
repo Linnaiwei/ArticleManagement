@@ -14,8 +14,11 @@ app
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+<<<<<<< HEAD
 .idea/.gitignore
 .idea/ArticleManagement.iml
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+=======
+>>>>>>> 9a1c37c6c7520e95be21e516f23445204e104dba
